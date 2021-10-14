@@ -6,6 +6,7 @@ import Landing from './components/Landing';
 import Pricing from './components/Pricing';
 
 export default () => {
+  console.log("edit in App.js");
   return (
     <div>
       <StylesProvider>
