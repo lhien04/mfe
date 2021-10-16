@@ -23,10 +23,10 @@ export default () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   useEffect(() => {
-    if (isSignedIn) {
-      history.push('/dashboard');
-    }
-  }, [isSignedIn]);
+    if (isSignedIn) history.push('/dashboard')
+    if (!isSignedIn && history.location.pathname === '/dashboard')
+      history.push('/')
+  }, [isSignedIn])
 
   return (
     <Router history={history}>
